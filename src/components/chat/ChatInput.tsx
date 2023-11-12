@@ -2,8 +2,8 @@ import { Send } from "lucide-react";
 import { Button } from "../ui/button";
 import { useContext, useRef } from "react";
 import { ChatContext } from "./ChatContext";
-import { Textarea } from "../ui/Textarea";
 import NoSSR from "react-no-ssr";
+import { Textarea } from "../ui/textarea";
 
 interface ChatInputProps {
   isDisabled?: boolean;
