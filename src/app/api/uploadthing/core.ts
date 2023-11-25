@@ -64,10 +64,8 @@ const onUploadComplete = async ({
 
     const { subscriptionPlan } = metadata;
     const { isSubscribed } = subscriptionPlan;
-    const isProExceeded =
-      pagesAmt > PLANS.find((plan) => plan.name === "Pro")!.pagesPerPdf;
-    const isFreeExceeded =
-      pagesAmt > PLANS.find((plan) => plan.name === "Free")!.pagesPerPdf;
+    const isProExceeded = false;
+    const isFreeExceeded = false;
     if ((isSubscribed && isProExceeded) || (!isSubscribed && isFreeExceeded)) {
       await db.file.update({
         data: {
